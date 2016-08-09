@@ -274,6 +274,8 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
         NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
         [self.stillImageOutput setOutputSettings:outputSettings];
         [self.session addOutput:self.stillImageOutput];
+        
+        [self setMirror:_mirror];
     }
     
     //if we had disabled the connection on capture, re-enable it
